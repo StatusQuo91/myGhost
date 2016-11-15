@@ -1,0 +1,8 @@
+[31mWARNING: Ghost is attempting to use a direct method to send email. 
+It is recommended that you explicitly configure an email service.[0m
+[32mHelp and documentation can be found at http://support.ghost.org/mail.[0m
+
+Ghost is running in production... 
+Your blog is now available on http://10.11.160.195 
+Ctrl+C to shut down
+error: Forever detected script was killed by signal: SIGKILL

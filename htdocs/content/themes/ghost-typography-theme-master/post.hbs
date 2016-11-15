@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+
+  {{> post-head}}
+
+  <div class="site-wrapper">
+
+    <div class="content-container content">
+
+      <h1>{{title}}</h1>
+
+      {{{content}}}
+
+      {{!-- {{> disqus}} --}}
+
+    </div>
+
+    {{> footer}}
+
+  </div>
+
+  {{> social-js}}
+
+{{/post}}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{meta_description}}" />
+
+    <title>{{@blog.title}} &gt; {{meta_title}}</title>
+
+    <!-- Main theme stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+    <!-- Template - and dependency - Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/global.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+
+    {{! Following stylesheet directive controls the custom font: }}
+    <!-- Fontsheet -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/cheltenham-cheltenham.css"}}" />
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/cheltenham-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/coco-dubiel.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/coco-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/couture-dubiel.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/couture-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/dubiel-dubiel.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/dubiel-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/helveticaneue-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/lustscript-dubiel.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/lustscript-helveticaneue.css"}}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset "css/fontsheets/vanity-dubiel.css"}}" />-->
+
+    {{!--
+
+    A note on how 'fontsheets' work in Typography theme:
+
+    A fontsheet is a small stylesheet with one simple purpose: to set the font combination for your site. There are twelve available fontsheets, and you can use only one at a time. Feel free to add new fontsheets however, using one of the existing files as a template. You always need to put the actual font file in the /assets/fonts folder, and generally speaking you should use the .otf file format. Google/Typekit fonts can also be used, but you'll have to figure out how to implement that here yourself (i.e referencing a URL instead of a font file path in the fontsheet).
+
+    Each fontsheet reference above is commented out using standard HTML comments: <!-- EXPRESSION -->.
+
+    To enable a fontsheet, simply uncomment it by removing the HTML commenting syntax from each end of the line. Be sure that all other lines are commented out, except for the one that you want to use. You will then need to re-upload default.hbs to the theme folder in your Ghost install, and restart Ghost for changes to take effect.
+
+    --}}
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/menu.css"}}" />
+
+    {{! stylesheet for this view is selected dynamically }}
+    {{#is "index"}}{{#is "home"}}<link rel="stylesheet" type="text/css" href="{{asset "css/allposts.css"}}" />{{else}}<link rel="stylesheet" type="text/css" href="{{asset "css/allposts.css"}}" />{{/is}}{{/is}}
+
+    {{#is "post"}}<link rel="stylesheet" type="text/css" href="{{asset "css/single.css"}}" />{{/is}}
+    {{#is "page"}}<link rel="stylesheet" type="text/css" href="{{asset "css/single.css"}}" />{{/is}}
+    {{#is "author"}}<link rel="stylesheet" type="text/css" href="{{asset "css/allposts.css"}}" />{{/is}}
+    {{#is "tag"}}<link rel="stylesheet" type="text/css" href="{{asset "css/allposts.css"}}" />{{/is}}
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{asset "images/favicon.ico"}}" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {{! Ghost head output }}
+    {{ghost_head}}
+
+  </head>
+
+  <body class="{{body_class}}">
+
+    <a name="top"></a>
+
+    {{! Main output }}
+    {{{body}}}
+
+
+    {{! Template - and dependency - Javascript libraries }}
+    <script src="{{asset "js/jquery-2.2.1.min.js"}}"></script>
+    <script src="{{asset "js/bootstrap.min.js"}}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{asset "js/ie10-viewport-bug-workaround.js"}}"></script>
+
+
+    {{! Ghost foot output }}
+    {{ghost_foot}}
+
+
+  </body>
+
+</html>

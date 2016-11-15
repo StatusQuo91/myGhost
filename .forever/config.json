@@ -1,0 +1,17 @@
+{
+  "root": "/opt/bitnami/apps/ghost/.forever",
+  "pidPath": "/opt/bitnami/apps/ghost/.forever/pids",
+  "sockPath": "/opt/bitnami/apps/ghost/.forever/sock",
+  "loglength": 100,
+  "logstream": false,
+  "columns": [
+    "uid",
+    "command",
+    "script",
+    "forever",
+    "pid",
+    "id",
+    "logfile",
+    "uptime"
+  ]
+}
